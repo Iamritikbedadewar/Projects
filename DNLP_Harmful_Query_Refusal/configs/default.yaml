@@ -1,0 +1,79 @@
+project:
+  seed: 42
+  n_splits: 5
+  validation_fraction: 0.125
+
+privacy:
+  block_network: true
+  reject_cloud_synced_paths: true
+  save_private_errors: false
+
+data:
+  harmful_file: synthetic_nlq_abuse.json
+  harmless_file: synthetic_nlq_mongo_pairs.json
+  ambiguous_file: synthetic_nlq_ambiguous.json
+  expected_per_class: 100
+  strict_expected_counts: true
+  question_fields:
+    - question
+    - natural_language_question
+    - natural_language_query
+    - nl_query
+    - nl_question
+    - nlq
+    - user_query
+    - user_request
+    - request
+    - input
+    - prompt
+    - text
+    - query
+  rationale_fields:
+    - refusal_response
+    - response
+    - expected_response
+    - expected_answer
+    - answer
+    - explanation
+    - rationale
+    - reason
+    - refusal
+    - expected_output
+    - output
+
+models:
+  kimcnn:
+    max_length: 128
+    max_vocab_size: 12000
+    min_frequency: 1
+    embedding_dim: 128
+    filter_sizes: [3, 4, 5]
+    filters_per_size: 100
+    dropout: 0.5
+    batch_size: 16
+    learning_rate: 0.001
+    weight_decay: 0.0001
+    epochs: 30
+    early_stopping_patience: 5
+  flan_t5:
+    model_dir: models/flan-t5-small
+    max_input_length: 256
+    max_target_length: 128
+    max_new_tokens: 96
+    train_batch_size: 4
+    inference_batch_size: 8
+    learning_rate: 0.00005
+    weight_decay: 0.01
+    epochs: 10
+    early_stopping_patience: 3
+    gradient_clip_norm: 1.0
+
+evaluation:
+  positive_label: harmful
+  bertscore_model_dir: models/bert-score-roberta-large
+  bertscore_num_layers: 17
+  skip_bertscore: false
+
+outputs:
+  public_dir: results_public
+  private_dir: private_outputs

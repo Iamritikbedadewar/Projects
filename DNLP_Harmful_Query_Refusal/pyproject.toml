@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dnlp-harmful-query-refusal"
+version = "0.1.0"
+description = "Offline DNLP experiments for harmful-query classification and refusal generation"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "torch>=2.3,<3",
+  "transformers>=4.48,<5",
+  "huggingface-hub>=0.27,<1",
+  "sentencepiece>=0.2,<1",
+  "scikit-learn>=1.4,<2",
+  "numpy>=1.26,<3",
+  "PyYAML>=6,<7",
+  "bert-score>=0.3.13,<1",
+  "matplotlib>=3.8,<4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[project.scripts]
+dnlp-refusal = "dnlp_refusal.run_experiments:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+

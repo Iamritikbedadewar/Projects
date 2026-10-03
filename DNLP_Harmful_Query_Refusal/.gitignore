@@ -1,0 +1,48 @@
+# Confidential provider data
+matplus-data/
+**/matplus-data/
+data/raw/
+data/private/
+**/synthetic_nlq_abuse.json
+**/synthetic_nlq_ambiguous.json
+**/synthetic_nlq_mongo_pairs.json
+**/material_schema.json
+**/example-materials/
+
+# Derived confidential artifacts
+private_outputs/
+**/private_predictions*.jsonl
+**/private_error*.csv
+**/checkpoints/
+models/
+
+# Common cloud-sync directories
+OneDrive/
+Google Drive/
+Dropbox/
+iCloud/
+Box Sync/
+
+# Python and tooling
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Aggregate outputs may be shareable only if the agreement permits them.
+results_public/*
+!results_public/.gitkeep
+
