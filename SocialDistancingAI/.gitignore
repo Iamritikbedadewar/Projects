@@ -1,0 +1,13 @@
+*.xml
+*.iml
+*.pyc
+*.avi
+*.mov4
+*.mp
+.venv/
+venv/
+.virtualenvs/
+__pycache__/
+*.pyc
+.idea/
+.env
