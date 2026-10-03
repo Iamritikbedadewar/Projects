@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Self Drive Car, Bikes, Scooter in Pune city</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{url_for('static', filename='css/dni.css')}}">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/1ce88f55cc.js" crossorigin="anonymous"></script>
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+    <div class="container-fluid">
+
+
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-brand title-tin" href="#">Driveme</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer"> Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing"> Details </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cta"> Profile</a>
+            </li>
+
+          </ul>
+
+        </div>
+      </nav>
+
+
+
+      <!-- Title -->
+      <div class="row">
+
+
+        <div class="col-lg-6">
+          <h1 class="big-headings"> Book the Bikes and Cars for your journey </h1>
+          <button type="button" class="btn btn-dark btn-outline-primary my-button "><i class="fab fa-apple"></i> Download</button>
+          <button type="button" class="btn btn-outline-primary btn-dark my-button"> <i class="fab fa-google-play"></i> Download</button>
+        </div>
+        <div class="col-lg-6">
+          <img class="title-img" src="{{url_for('static', filename='image/bookride.png')}}" alt="iphone-mockup">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Features -->
+
+  <section class="white-section" id="features">
+    <div class="container-fluid ">
+      <div class="row">
+        <div class=" feature-box col-lg-4">
+
+          <i class="icon far fa-check-circle fa-5x"></i>
+          <h3 class="feature-title">Smart Check-in</h3>
+          <p class="p-features">So easy to use, Book a ride in one tap</p>
+
+        </div>
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-bullseye fa-5x"></i>
+          <h3 class="feature-title"> Elite Members</h3>
+          <p class="p-features">Be the VIP member and get exiciting offer on booking</p>
+
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <i class="icon fas fa-heart fa-5x"></i>
+          <h3 class="feature-title">Premium Services</h3>
+          <p class="p-features">Coustomer satisfaction is our motto so don't worry</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section class="colored-section" id="testimonials">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+
+          <h2 class="testimonial-text">For my travelling work, i prefer this site for booking a cab, belive me it's safe </h2>
+          <img class="testimonial-img" src="{{url_for('static', filename='image/pablo.jpg')}}" alt="pablo-profile">
+          <em>colombian, Pune</em>
+        </div>
+        <div class="carousel-item container-fluid">
+
+          <h2 class="testimonial-text">You are right this is the site from which i always books a cab , rest story you knows better</h2>
+          <img class="testimonial-img" src="{{url_for('static', filename='image/deadpool.jpg')}}" alt="deadpool-profile">
+          <em>Warje, Pune</em>
+        </div>
+
+
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+
+
+
+  </section>
+
+
+  <!-- Press -->
+
+  <section class="colored-section" id="press">
+    
+    <img class="press-img" src="{{url_for('static', filename='image/TechCrunch.png')}}" alt="tnw-logo">
+    <img class="press-img" src="{{url_for('static', filename='image/bizinsider.png')}}" alt="biz-insider-logo">
+    <img class="press-img" src="{{url_for('static', filename='image/tnw.png')}}" alt="mashable-logo">
+    <img class="press-img" src="{{url_for('static', filename='image/mashable.png')}}" alt="TechCrunch-logo">
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section class="white-section"id="pricing">
+
+    <h2 class="section-headings">A car for every occasion</h2>
+    <p>Driveme offers city taxis, inter-city cabs, and local cabs at hourly packages</p>
+    <div class="row">
+
+      <div class="pricing-col col-lg-4 col-md-6">
+        <div class="card">
+
+          <div class="card-header">
+            <h3>City Drive</h3>
+          </div>
+          <div class="card-body">
+
+           <p>The perfect way to get through your everyday travel needs. City taxis are available 24/7 and you can book and travel in an instant. With rides starting from as low as Rs.6/km, you can choose from a wide range of vehicle!</p>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary btn-dark">Sign up</button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" pricing-col col-lg-4 col-md-6">
+        <div class="card">
+
+          <div class="card-header">
+            <h3>Outstation Drive</h3>
+          </div>
+          <div class="card-body">
+           <p>Ride out of town at affordable one-way and round-trip fares with Driveme intercity travel service. Choose from a range of AC cabs deiven by top partners, available in 1 hour or book upto 7 days before in advance.We have you covered across Pune.</p>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary btn-dark">Sign up</button>
+          </div>
+        </div>
+      </div>
+      <div class=" pricing-col col-lg-4">
+        <div class="card">
+
+          <div class="card-header">
+            <h3>Rentals</h3>
+          </div>
+          <div class="card-body">
+            <p>With Driveme Rentals you get a cab at your disposal. So be it a day long business meeting, a shoppinh trip with your friends or just a day out in a new city, we have you coverd. Packages start at 1 hour and can be extended upto 12 hours!</p>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary btn-dark">Sign up </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section class="colored-section" id="cta ">
+    <div class="container-fluid">
+
+
+      <h3 class="big-headings">Book the Ride and make a perfect trip with us.</h3>
+      <button type="button" class="btn btn-dark btn-outline-primary my-button "><i class="fab fa-apple"></i> Download</button>
+      <button type="button" class=" btn btn-outline-primary btn-dark my-button"> <i class="fab fa-google-play"></i> Download</button>
+  </section>
+  </div>
+
+
+  <!-- Footer -->
+
+  <footer  class="white-section" id="footer">
+    <div class="container-fluid">
+
+
+      <a href="#"><i class="social-icon fab fa-instagram"></i></a>
+      <a href="#"> <i class=" social-icon fab fa-facebook-square"></i></a>
+      <a href="#"><i class=" social-icon fab fa-twitter"></i></a>
+      <a href="#"> <i class="social-icon fas fa-envelope"></i></a>
+    </div>
+
+
+    <p class="Pfooter">© Copyright 2020 Driveme</p>
+
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>
